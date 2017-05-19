@@ -1,0 +1,41 @@
+description: "copies a dir from s3"
+name: github.com/opspec-pkgs/aws.cp-dir-from-s3
+inputs:
+  s3URI:
+    string:
+      description: "where to copy from"
+      constraints: { format: uri }
+  AWS_ACCESS_KEY_ID:
+    string:
+      constraints: { minLength: 20 }
+      description: access key for AWS
+  AWS_SECRET_ACCESS_KEY:
+    string:
+      constraints: { minLength: 20 }
+      description: secret access key for AWS
+  AWS_DEFAULT_REGION:
+    string:
+      constraints: { minLength: 1 }
+      description: default region
+      default: us-west-2
+outputs:
+  dstDir:
+    dir:
+      default: .
+      description: dir from s3
+run:
+  container:
+    cmd:
+      - sh
+      - -ce
+      - |
+        echo "installing deps"
+        pip install awscli
+
+        echo "copying assets"
+        aws s3 cp $(s3URI) .  --recursive
+    dirs:
+      /dst: dstDir
+    envVars: { AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_DEFAULT_REGION }
+    image: { ref: 'python:2.7' }
+    workDir: /dst
