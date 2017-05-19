@@ -32,7 +32,7 @@ run:
         echo "installing deps"
         pip install awscli
 
-        echo "copying assets"
+        echo "copying dir"
         aws s3 cp $(s3URI) .  --recursive
     dirs:
       /dst: dstDir
