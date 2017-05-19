@@ -19,7 +19,7 @@ opctl run github.com/opspec-pkgs/aws.s3.cp-dir-from#VERSION
 
 ## compose
 
-```
+```yaml
 run:
   op:
     pkg: { ref: github.com/opspec-pkgs/aws.s3.cp-dir-from#VERSION }
