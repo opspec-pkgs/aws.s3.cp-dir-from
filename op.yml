@@ -1,5 +1,5 @@
 description: "copies a dir from s3"
-name: github.com/opspec-pkgs/aws.cp-dir-from-s3
+name: github.com/opspec-pkgs/aws.s3.cp-dir-from
 inputs:
   s3URI:
     string:
