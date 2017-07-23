@@ -23,6 +23,7 @@ outputs:
     dir:
       default: .
       description: dir from s3
+version: 1.0.0
 run:
   container:
     cmd:
