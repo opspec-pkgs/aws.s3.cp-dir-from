@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/opspec-pkgs/aws.s3.cp-dir-from.svg?branch=master)](https://travis-ci.org/opspec-pkgs/aws.s3.cp-dir-from)
+
 # Problem statement
 copies a dir from s3
 
@@ -23,10 +25,10 @@ opctl run github.com/opspec-pkgs/aws.s3.cp-dir-from#VERSION
 op:
   pkg: { ref: github.com/opspec-pkgs/aws.s3.cp-dir-from#VERSION }
   inputs: 
-    s3URI:
-    AWS_ACCESS_KEY_ID:
-    AWS_SECRET_ACCESS_KEY:
-    AWS_DEFAULT_REGION:
+    s3Uri:
+    accessKeyId:
+    secretAccessKey:
+    region:
   outputs: 
     dstDir:
 ```

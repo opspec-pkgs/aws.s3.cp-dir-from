@@ -1,0 +1,29 @@
+name: release
+description: releases the package
+inputs:
+  version:
+    string:
+      constraints: { format: semver }
+  dockerUsername:
+    string: {}
+  dockerPassword:
+    string: {}
+  pkg:
+    dir:
+      default: .
+run:
+  serial:
+    - op:
+        pkg: { ref: build }
+        inputs:
+          version:
+          pkg:
+        outputs:
+          imageTar:
+    - op:
+        pkg: { ref: github.com/opspec-pkgs/docker.image.push#1.1.0 }
+        inputs:
+          imageTar:
+          imageName: 'opspecpkgs/aws.s3.cp-dir-from:$(version)'
+          username: $(dockerUsername)
+          password: $(dockerPassword)
