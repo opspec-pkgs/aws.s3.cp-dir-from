@@ -29,8 +29,7 @@ run:
     cmd:
       - sh
       - -ce
-      - |
-        aws s3 cp $(s3Uri) .  --recursive
+      - aws s3 cp $(s3Uri) .  --recursive
     dirs:
       /dst: dstDir
     envVars:
