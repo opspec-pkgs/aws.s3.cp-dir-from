@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/opspec-pkgs/aws.s3.cp-dir-from.svg?branch=master)](https://travis-ci.org/opspec-pkgs/aws.s3.cp-dir-from)
 
+<img src="icon.svg" alt="icon" height="100px">
 
 # Problem statement
 
@@ -29,8 +30,8 @@ opctl run github.com/opspec-pkgs/aws.s3.cp-dir-from#1.0.0
 op:
   pkg: { ref: github.com/opspec-pkgs/aws.s3.cp-dir-from#1.0.0 }
   inputs:
-    accessKeyId:
     s3Uri:
+    accessKeyId:
     secretAccessKey:
     # params w/ default
     region:
