@@ -31,7 +31,7 @@ run:
       - -ce
       - aws s3 cp $(s3Uri) .  --recursive
     dirs:
-      /dst: dstDir
+      /dst: $(dstDir)
     envVars:
       AWS_ACCESS_KEY_ID: $(accessKeyId)
       AWS_SECRET_ACCESS_KEY: $(secretAccessKey)
