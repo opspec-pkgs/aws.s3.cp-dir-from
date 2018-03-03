@@ -1,42 +1,49 @@
 [![Build Status](https://travis-ci.org/opspec-pkgs/aws.s3.cp-dir-from.svg?branch=master)](https://travis-ci.org/opspec-pkgs/aws.s3.cp-dir-from)
 
+
 # Problem statement
+
 copies a dir from s3
+
+# Format
+
+this version of the pkg is in [![opspec 0.1.5](https://img.shields.io/badge/opspec-0.1.5-brightgreen.svg?colorA=6b6b6b&colorB=fc16be)](https://opspec.io/0.1.5/packages.html) format
 
 # Example usage
 
-> note: in examples, VERSION represents a version of the aws.s3.cp-dir-from pkg
-
-## install
+## Install
 
 ```shell
-opctl pkg install github.com/opspec-pkgs/aws.s3.cp-dir-from#VERSION
+opctl pkg install github.com/opspec-pkgs/aws.s3.cp-dir-from#1.0.0
 ```
 
-## run
+## Run
 
 ```
-opctl run github.com/opspec-pkgs/aws.s3.cp-dir-from#VERSION
+opctl run github.com/opspec-pkgs/aws.s3.cp-dir-from#1.0.0
 ```
 
-## compose
+## Compose
 
 ```yaml
 op:
-  pkg: { ref: github.com/opspec-pkgs/aws.s3.cp-dir-from#VERSION }
-  inputs: 
-    s3Uri:
+  pkg: { ref: github.com/opspec-pkgs/aws.s3.cp-dir-from#1.0.0 }
+  inputs:
     accessKeyId:
+    s3Uri:
     secretAccessKey:
+    # params w/ default
     region:
-  outputs: 
+  outputs:
     dstDir:
 ```
 
 # Support
 
-join us on [![Slack](https://opspec-slackin.herokuapp.com/badge.svg)](https://opspec-slackin.herokuapp.com/)
-or [open an issue](https://github.com/opspec-pkgs/aws.s3.cp-dir-from/issues)
+join us on
+[![Slack](https://opspec-slackin.herokuapp.com/badge.svg)](https://opspec-slackin.herokuapp.com/)
+or
+[open an issue](https://github.com/opspec-pkgs/aws.s3.cp-dir-from/issues)
 
 # Releases
 
@@ -47,4 +54,5 @@ and [tagged](https://git-scm.com/book/en/v2/Git-Basics-Tagging); see
 
 # Contributing
 
-see [project/CONTRIBUTING.md](https://github.com/opspec-pkgs/project/blob/master/CONTRIBUTING.md)
+see
+[project/CONTRIBUTING.md](https://github.com/opspec-pkgs/project/blob/master/CONTRIBUTING.md)
