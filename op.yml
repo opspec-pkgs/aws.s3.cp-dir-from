@@ -23,7 +23,7 @@ outputs:
     dir:
       default: .
       description: dir from s3
-version: 1.0.0
+version: 1.1.0
 run:
   container:
     cmd:
@@ -36,5 +36,5 @@ run:
       AWS_ACCESS_KEY_ID: $(accessKeyId)
       AWS_SECRET_ACCESS_KEY: $(secretAccessKey)
       AWS_DEFAULT_REGION: $(region)
-    image: { ref: 'opspecpkgs/aws.s3.cp-dir-from:1.0.0' }
+    image: { ref: 'opspecpkgs/aws.s3.cp-dir-from:1.1.0' }
     workDir: /dst
