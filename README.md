@@ -1,4 +1,5 @@
-[![Build Status](https://github.com/opspec-pkgs/aws.s3.cp-dir-from/workflows/build/badge.svg?branch=main)](https://github.com/opspec-pkgs/aws.s3.cp-dir-from/actions?query=workflow%3Abuild+branch%3Amain)
+[![build](https://github.com/opspec-pkgs/aws.s3.cp-dir-from/actions/workflows/build.yml/badge.svg)](https://github.com/opspec-pkgs/aws.s3.cp-dir-from/actions/workflows/build.yml)
+
 
 <img src="icon.svg" alt="icon" height="100px">
 
